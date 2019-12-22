@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>sy11-1</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			div {
+				width: 250px;
+				height: 80px;
+				text-align: center;
+				line-height: 80px;
+				font-weight: bold;
+				font-size: 25px;
+				background-color: pink;
+				color: #fff;
+				margin: 20px auto;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap1">我是wrap1</div>
+		<div id="wrap2">我是wrap2</div>
+		<script>
+			var oWrap1 = document.getElementById("wrap1"),
+				oWrap2 = document.getElementById("wrap2");
+			oWrap1.onmouseenter = function() {
+				oWrap2.innerHTML = "鼠标移入了wrap1";
+			}
+			oWrap1.onmouseleave = function() {
+				oWrap2.innerHTML = "鼠标离开了wrap1";
+			}
+			oWrap2.onmouseenter = function() {
+				oWrap1.innerHTML = "鼠标移入了wrap2";
+			}
+			oWrap2.onmouseleave = function() {
+				oWrap1.innerHTML = "鼠标离开了wrap2";
+			}
+		</script>
+	</body>
+</html>
